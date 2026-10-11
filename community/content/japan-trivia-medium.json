@@ -290,5 +290,16 @@
     "difficulty": "medium",
     "answers": ["Kyoto", "Nagoya", "Hiroshima", "Sendai"],
     "correctIndex": 0
-  }
+  },
+{
+  "question": "Which Japanese island is known for its active volcano Mount Aso? (Community variation 55)",
+  "difficulty": "medium",
+  "answers": [
+    "Kyushu",
+    "Honshu",
+    "Shikoku",
+    "Hokkaido"
+  ],
+  "correctIndex": 0
+}
 ]
