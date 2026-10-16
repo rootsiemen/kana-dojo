@@ -53,10 +53,7 @@ export const GameBottomBar = ({
   // When hideRetry is true, treat wrong state like check state for button display
   const showRetryButton = isWrong && !hideRetry;
   const showNextButton =
-    actionLabel === 'next' ||
-    actionLabel === 'skip' ||
-    showContinue ||
-    (isWrong && hideRetry);
+    actionLabel === 'next' || actionLabel === 'skip' || showContinue;
 
   // Default titles if not provided
   const defaultTitle = isCorrect

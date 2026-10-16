@@ -204,7 +204,13 @@ const InputGame = ({ isHidden, isReverse = false }: InputGameProps) => {
   const isReady = isReverse ? hasRomaji : hasKana;
 
   useEffect(() => {
-    if (inputRef.current && bottomBarState === 'check') {
+    // Keep focus in the answer box for check and wrong states. After an
+    // incorrect answer the box is auto-cleared, so refocusing makes the
+    // retry path immediate and obvious.
+    if (
+      inputRef.current &&
+      (bottomBarState === 'check' || bottomBarState === 'wrong')
+    ) {
       inputRef.current.focus();
     }
   }, [bottomBarState]);
